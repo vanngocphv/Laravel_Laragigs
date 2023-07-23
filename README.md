@@ -29,11 +29,11 @@ Project website: using laravel for creating this website
 ![register demo](./LaravelDemo/register_demo.gif) 
 <br />
 - Posting new job: <br />
-![posting new job demo](./LaravelDemo/posting_demo.gif)
+![register demo](./LaravelDemo/register_demo.gif) 
 <br />
 - Manage list job: <br />
-![manage list job](./LaravelDemo/manage_demo.gif)
+![register demo](./LaravelDemo/register_demo.gif) 
 <br />
 - Search: <br />
-![search job demo](./LaravelDemo/search_demo.gif)
+![register demo](./LaravelDemo/register_demo.gif) 
 
