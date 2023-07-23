@@ -34,6 +34,6 @@ Project website: using laravel for creating this website
 - Manage list job: <br />
 ![manage list job](./LaravelDemo/manage_demo.gif)
 <br />
-- Search:
+- Search: <br />
 ![search job demo](./LaravelDemo/search_demo.gif)
 
