@@ -46,12 +46,60 @@ class ListingController extends Controller
             //set file name with path is /public/logos/filename.png
             $formValues['logo'] = $request->file('logo')->store('logos', 'public');
         }
-
+        
+        $formValues['user_id'] = auth()->id();
 
 
         session('message', 'Create Successfully');
         Listing::create($formValues);
         
         return redirect('/')->with('message', 'Created Successfully');
+    }
+
+    //get request, send back a form
+    public function edit(Listing $listing){
+
+        //return view form
+        return view('listings.edit', [ 'listing' => $listing ]);
+    }
+
+    //post request, send to database
+    public function update(Request $request, Listing $listing){
+
+        if($listing->user_id != auth()->id()){
+            abort(403, "Unauthorized Action!");
+        }
+
+        $formValues = $request->validate([
+            'title' => 'required',
+            'company' => 'required',
+            'location' => 'required',
+            'website' => 'required',
+            'email' => ['required', 'email'],
+            'tags' => 'required',
+            'description' => 'required'
+        ]);
+
+        //check if request has file include
+        if($request->has('logo')){
+            //set file name with path is /public/logos/filename.png
+            $formValues['logo'] = $request->file('logo')->store('logos', 'public');
+        }
+
+        $listing->update($formValues);
+
+        
+        return back()->with('message', 'Update Successfully');
+    }
+
+    //DELETE request, send request to delete record
+    public function delete(Listing $listing){
+        if($listing->user_id != auth()->id()){
+            abort(403, "Unauthorized Action!");
+        }
+
+        $listing->delete();
+
+        return redirect('/')->with('message', 'Deleted Successfully');
     }
 }
