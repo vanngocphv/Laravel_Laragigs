@@ -25,15 +25,16 @@ Project website: using laravel for creating this website
 - Search: user/viewer can search, select tag from job for filter job list output
 
 # Demo
+
 - Register: <br />
-![register demo](./LaravelDemo/register_demo.gif) 
-<br />
+![register demo](./LaravelDemo/register_demo.gif)
+
 - Posting new job: <br />
-![register demo](./LaravelDemo/register_demo.gif) 
-<br />
+![posting new job demo](./LaravelDemo/posting_demo.gif)
+
 - Manage list job: <br />
-![register demo](./LaravelDemo/register_demo.gif) 
-<br />
+![manage list job](./LaravelDemo/manage_demo.gif)
+
 - Search: <br />
-![register demo](./LaravelDemo/register_demo.gif) 
+![search job demo](./LaravelDemo/search_demo.gif)
 
